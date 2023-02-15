@@ -18,8 +18,7 @@
         <h3>Chapters</h3>
       </div>
       <div class="prose p-12 bg-white rounded-md w-[65ch]">
-        <h2>Lesson</h2>
-        <p>This is a lesson</p>
+        <NuxtPage/>
       </div>
     </div>
   </div>
