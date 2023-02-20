@@ -35,6 +35,7 @@
         </NuxtLink>
       </div>
     </div>
+
     <div class="prose p-12 bg-white rounded-md w-[65ch]">
       <NuxtErrorBoundary>
         <NuxtPage/>
@@ -52,7 +53,7 @@
             </button>
           </p>
         </template>
-        <NuxtErrorBoundary/>
+      </NuxtErrorBoundary>
     </div>
   </div>
 
@@ -61,7 +62,10 @@
 <script setup>
 const {chapters} = useCourse();
 
-const resetError=(error) => {
-  error.value = null;
+const resetError= async (error) => {
+  throw createError({
+    fatal: true,
+    message: 'Fatal error',
+  })
 }
 </script>
